@@ -1,5 +1,5 @@
+import Button from '../components/ui/Button.jsx'
 import Photo from '../components/ui/Photo.jsx'
-import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import CtaBand from '../components/ui/CtaBand.jsx'
 import { about } from '../content/site.js'
@@ -28,23 +28,6 @@ export default function AboutPage() {
       </section>
 
       <section className="section section--alt">
-        <div className="container">
-          <Reveal>
-            <SectionHeading title={about.documentsTitle} />
-          </Reveal>
-          <Reveal as="div" className="card-grid">
-            {about.documents.map((doc) => (
-              <article className="doc-card" key={doc.title}>
-                <span className="doc-card__tag">Документ</span>
-                <h3>{doc.title}</h3>
-                <p>{doc.text}</p>
-              </article>
-            ))}
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="section">
         <div className="container two-col">
           <Reveal>
             <h2>{about.credentialsTitle}</h2>
@@ -53,6 +36,11 @@ export default function AboutPage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+            <div className="section-actions">
+              <Button to="/documents" variant="secondary">
+                Смотреть документы
+              </Button>
+            </div>
           </Reveal>
           <Reveal>
             <h2>{about.principlesTitle}</h2>
