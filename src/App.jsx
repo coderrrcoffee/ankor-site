@@ -6,6 +6,7 @@ import LessonsPage from './pages/LessonsPage.jsx'
 import PricingPage from './pages/PricingPage.jsx'
 import DocumentsPage from './pages/DocumentsPage.jsx'
 import ReviewsPage from './pages/ReviewsPage.jsx'
+import FaqPage from './pages/FaqPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/documents" element={<DocumentsPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/faq" element={<FaqPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>

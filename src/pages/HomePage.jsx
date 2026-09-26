@@ -1,6 +1,7 @@
 import Hero from '../components/home/Hero.jsx'
 import Button from '../components/ui/Button.jsx'
 import SectionHeading from '../components/ui/SectionHeading.jsx'
+import Accordion from '../components/ui/Accordion.jsx'
 import PriceCard from '../components/ui/PriceCard.jsx'
 import ReviewCard from '../components/ui/ReviewCard.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
@@ -12,6 +13,7 @@ import {
   steps,
   reviews,
   pricing,
+  faq,
 } from '../content/site.js'
 
 export default function HomePage() {
@@ -129,6 +131,22 @@ export default function HomePage() {
               <PriceCard key={plan.title} {...plan} />
             ))}
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section section--alt">
+        <div className="container">
+          <Reveal>
+            <SectionHeading eyebrow="Вопросы" title="Частые вопросы" />
+          </Reveal>
+          <Reveal>
+            <Accordion items={faq.slice(0, 3)} />
+          </Reveal>
+          <div className="section-actions">
+            <Button to="/faq" variant="secondary">
+              Все вопросы
+            </Button>
+          </div>
         </div>
       </section>
 
