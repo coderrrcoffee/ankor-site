@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="site-footer__brand">
           <p className="site-footer__name">{tutor.name}</p>
           <p className="site-footer__role">
-            {tutor.role} · {tutor.city}
+            {tutor.city ? `${tutor.role} · ${tutor.city}` : tutor.role}
           </p>
         </div>
 
